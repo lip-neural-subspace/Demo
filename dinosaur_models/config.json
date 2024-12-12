@@ -1,0 +1,24 @@
+{
+    "output_dir": "dinosaur_models/output",
+    "data_dir": "dinosaur_models/trajectory_data",
+    "pca_basis_dir": "dinosaur_models/PCA_basis",
+    "cubature_dir": "dinosaur_models/cubature",
+
+    "system_name": "fem", 
+    "problem_name": "dinosaur",
+
+    "subspace_latent_dim": 40,
+    "encoder_hidden_layers": [200, 200],
+    "decoder_hidden_layers": [200, 200],
+
+    "batch_size": 256,
+    "n_epoch": 30000,
+    "lr": 1e-3,
+    "lr_decay_frac": 0.8,
+    "lr_decay_every": 30000,
+    "lr_warm_up_iters": 2000,
+    "weight_landscape_reg": 0.001,
+    "landscape_type": "A",
+    "evaluation_batch_size": 128
+    
+}

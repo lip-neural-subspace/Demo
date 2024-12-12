@@ -1,0 +1,1 @@
+{"model_type": "MLP-Layers", "activation": "ELU", "in_dim": 40, "hidden_layer_sizes": [200, 200], "out_dim": 227}
