@@ -2,7 +2,7 @@
  
 **Authors:** Aoran Lyu, Shixian Zhao, Chuhua Xian, Zhihao Cen, Hongmin Cai, Guoxin Fang
 
-![teaser](https://github.com//media/teaser.png)
+![teaser](https://github.com/lip-neural-subspace/demo/blob/main/media/teaser.png)
 
 [[project page]](https://lip-neural-subspace.github.io)  [[PDF]](https://arxiv.org/pdf/2409.03807)
 
