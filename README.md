@@ -2,22 +2,21 @@
  
 **Authors:** Aoran Lyu, Shixian Zhao, Chuhua Xian, Zhihao Cen, Hongmin Cai, Guoxin Fang
 
-![teaser](https://github.com//media/teaser.png)
+![teaser](media/teaser.png)
 
 [[project page]](https://lip-neural-subspace.github.io)  [[PDF]](https://arxiv.org/pdf/2409.03807)
 
-
 This repo contains an implementation of our core procedure and two trained models (including training data).
+
+The code skeleton is adapted from the work of [[Sharp et al.]](https://github.com/nmwsharp/neural-physics-subspaces). We gratefully acknowledge their inspiring work.
 
 ## Installation Instructions
 
-This repository is standard Python code, tested with Python 3.9 on Ubuntu 20.04, as well as OSX systems.
+This repository is standard Python code tested with Python 3.9 on Ubuntu 20.04.
 
 The most significant depenency is JAX, which can be installed according to instructions here: https://jax.readthedocs.io/en/latest/
 
 Other dependencies are all available through pip and conda. Conda `environment.yml` file is included to help resolve dependencies.
-
-This code runs on CPUs or GPUs, although generally the GPU will be dramatically faster.
 
 ## Usage Instructions
 
@@ -62,7 +61,7 @@ python src/main_run_simulation_with_interactions.py --system_name fem --problem_
 
 ### Training Data Acquisition
 
-We generate training data from full configuration space simulation with random interactions.
+We generate training data from full space simulation with random interactions.
 - To get interaction sequences, use this script
 ```
 python src/main_gen_interaction_json.py --system_name [system_name] --problem_name [problem_name] --n_sample [n_sample] --n_actuation_frames[n_actuation_frames] --n_empty_frames [n_empty_frames] --n_end_frames [n_end_frames]
@@ -82,7 +81,7 @@ Parameters instructions:
 ```
 python src/main_save_trajectory.py --system_name [system_name] --problem_name [problem_name] --output_dir [output_dir] --interaction_json [interaction_json_file]
 ```
-This will run the simulation in the full configuration space. Click on UI elements in the upper-right to run the dynamics, which will dump the resulting network files to `output_dir`.
+This will run the simulation in the full space. Click on UI elements in the upper-right to run the dynamics, which will dump the simulation results for network training to `output_dir`.
 
 ### Generating PCA Basis and Cubature weights
 
